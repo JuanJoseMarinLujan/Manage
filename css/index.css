@@ -1,0 +1,922 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+/* -------- HEADER -------- */
+header {
+    position: fixed;
+    z-index: 5;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 15vh;
+    top: 0;
+}
+
+main {
+    z-index: -1;
+    margin-top: 15vh;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url(../img/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* -------- MENUS DE NAVEGACION -------- */
+.menu-desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40vw;
+    height: 5vh;
+    gap: 1vw;
+}/* MENU PARA ESCRITORIO */
+
+a {
+    text-decoration: none;
+} /* TODOS LOS ENLACES DEL MENU DE NAVEGACION PARA ESCRITORIO */
+.menu-desktop a {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 19px;
+
+    color: #242E52;
+}
+
+
+/* -------------------- MENU HAMBUERGUESA ---------------- */
+.hamburguesa {
+    font-size: 20px;
+    line-height: 19px;
+    color: #242E52;
+    cursor: pointer;
+}
+.menu-mobile {
+    display: none;
+    height: 100vh;
+    width: 100%;
+    top: 75px;
+    right: 0px;
+    text-align: center;
+    transition: all .5s;
+    display: block;
+    line-height: 30px;
+} /* MENU PARA MOBILE */
+.menu-mobile a {
+    display: none;
+    transition: all .5x;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 80px;
+    color: #242E52;
+}
+.menu-mobile a:hover {
+    color: #F3603B;;
+    transition: .3s;
+    font-size: 60px;
+}
+#check:checked ~ .menu-mobile {
+    height: 100vh;
+    background-color: rgba(255, 255, 255, .95);
+}
+#check:checked ~ .menu-mobile a {
+    display: block;
+}
+.menu-mobile:checked {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+} /* MENU PARA MOBILE OPRIMIDO */
+#check {
+    display: none;
+}
+
+/* --------------------------------------------------------- */
+
+
+/* ---------- BOTONES --------- */
+.button-started button {
+    display: flex;
+    width: 134px;
+    height: 44px;
+    border-radius: 50px;
+    background: #F3603B;
+    color: white;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+    align-items: center;
+    justify-content: center;
+    border: none;
+} /* BOTON STARTED DEL MENU DE NAVEGACION */
+.button-started2 button {
+    display: flex;
+    width: 134px;
+    height: 44px;
+    border-radius: 50px;
+    background: #F3603B;
+    color: white;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+    align-items: center;
+    justify-content: center;
+    border: none;
+} /* BOTON STARTED DE LA SECTION.HOME */ 
+.button-started3 button {
+    display: flex;
+    width: 134px;
+    height: 44px;
+    border-radius: 50px;
+    background: #F3603B;
+    color: white;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+    align-items: center;
+    justify-content: center;
+    border: none;
+    margin-top: 20px;
+} /* BOTON STARTED DE LA SECTION.WHATS-SAID */
+.button-started4 button {
+    display: flex;
+    width: 134px;
+    height: 44px;
+    border-radius: 50px;
+    background: white;
+    color: #F3603B;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+    align-items: center;
+    justify-content: center;
+    border: none;
+} /* BOTON STARTED DE LA SECTION.SIMPLIFY */
+
+.go {
+    display: flex;
+    width: 63px;
+    height: 42px;
+    border-radius: 50px;
+    background: #F3603B;
+    color: white;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+    align-items: center;
+    justify-content: center;
+    border: none;
+} /* BOTON GO DEL FOOTER */
+
+/* --------- HOVER --------- */
+.button-started button:hover {
+    cursor: pointer;
+    background: #f46f4d;
+    box-shadow: 5px 10px 10px gray;
+}
+.button-started2 button:hover {
+    cursor: pointer;
+    background: #f46f4d;
+    box-shadow: 5px 5px 10px gray;
+}
+.button-started3 button:hover {
+    cursor: pointer;
+    background: #f46f4d;
+    box-shadow: 5px 5px 10px gray;
+}
+.button-started4 button:hover {
+    cursor: pointer;
+    background: #ffeded;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.44);
+}
+.go:hover {
+    cursor: pointer;
+    background: #f46f4d;
+    box-shadow: 0px 0px 5px #f46e4d87;
+}
+
+a:hover {
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.menu-mobile2 a:hover {
+    cursor: pointer;
+    font-size: 15px;
+    color: #F3603B;
+}
+
+#redes-sociales a:hover {
+    font-size: 25px;
+    color: #F3603B;
+}
+
+
+/* BOTONES PARA LAS LISTAS DE LA SECTION.DOS */
+.lista-uno article button {
+    display: flex;
+    width: 69px;
+    height: 43px;
+    border-radius: 50px;
+    background: #F3603B;
+    color: white;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+.lista-dos article button {
+    display: flex;
+    width: 69px;
+    height: 43px;
+    border-radius: 50px;
+    background: #F3603B;
+    color: white;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+.lista-tres article button {
+    display: flex;
+    width: 69px;
+    height: 43px;
+    border-radius: 50px;
+    background: #F3603B;
+    color: white;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+
+/* -------- SECTION.HOME -------- */
+section.uno {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 2%;
+    width: 100vw;
+    height: 600px;
+}
+section.home {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    width: 1129px;
+    height: 525px;
+}
+
+div.bring {
+    display: block;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 33vw;
+    height: 60vh;
+}
+h1 {
+    color: #232C50;
+    font-weight: 700;
+    font-size: 58px;
+    line-height: 66px;
+    letter-spacing: -0.035em;
+}
+div.bring p {
+    font-weight: 500;
+    font-size: 16.5584px;
+    line-height: 26px;
+    width: 24vw;
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+div.illustrator {
+    width: 600px;
+    height: 525px;
+    background-image: url(../img/Group.png);
+    background-repeat: no-repeat;
+}
+
+
+/* -------- SECTION.WHATS-DIFFERENT -------- */
+section.dos {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 2%;
+    width: 100vw;
+    height: 600px;
+}
+section.whats-different {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5vw;
+    width: 1111px;
+    height: 549px;
+}
+div.text-different {
+    top: 0px;
+    height: 100%;
+    width: 433px;
+}
+div.text-different h2 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 41px;
+    color: #232851;
+    width: 433px;
+}
+div.text-different p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: #000000;
+    margin-top: 40px;
+    width: 337px;
+}
+div.lista {
+    height: 536px;
+    width: 553px;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+div.lista-uno {
+    display: flex;
+    flex-direction: column;
+}
+div.lista-dos {
+    display: flex;
+    flex-direction: column;
+}
+div.lista-tres {
+    display: flex;
+    flex-direction: column;
+}
+
+div.lista-uno article {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+}
+div.lista-dos article {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+}
+div.lista-tres article {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+}
+
+div.lista-uno article h3 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 23px;
+    letter-spacing: -0.015em;
+    color: #323851;
+}
+div.lista-dos article h3 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 23px;
+    letter-spacing: -0.015em;
+    color: #323851;
+}
+div.lista-tres article h3 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 23px;
+    letter-spacing: -0.015em;
+    color: #323851;
+}
+
+div.lista-uno p {
+    font-weight: 500;
+    font-size: 16.2984px;
+    line-height: 26px;
+    letter-spacing: -0.01em;
+    color: #B3B2B7;
+    height: 104px;
+    width: 437px;
+    margin-left: 94px;
+}
+div.lista-dos  p {
+    font-weight: 500;
+    font-size: 16.2984px;
+    line-height: 26px;
+    letter-spacing: -0.01em;
+    color: #B3B2B7;
+    height: 104px;
+    width: 458px;
+    margin-left: 94px;
+}
+div.lista-tres  p {
+    font-weight: 500;
+    font-size: 16.2984px;
+    line-height: 26px;
+    letter-spacing: -0.01em;
+    color: #B3B2B7;
+    height: 104px;
+    width: 423px;
+    margin-left: 94px;
+}
+
+
+/* -------- SECTION.WHATS-SAID -------- */
+section.tres {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 2%;
+    width: 100vw;
+    height: 550px;
+}
+section.whats-said {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 1298px;
+    height: 478px;
+}
+div.titulo-said {
+    width: 334.41px;
+    height: 61px;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 61px;
+    letter-spacing: -0.01em;
+    text-align: center;
+    margin: 30px;
+    color: #242E53;
+}
+div.cartas {
+    height: 255px;
+    width: 1300;
+    display: flex;
+    flex-direction: row;
+}
+
+.tarjetas {
+    position: relative;
+    padding: 50px 0;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #FAFAFA;
+}
+.tarjetas h4 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 16.0714px;
+    line-height: 25px;
+    margin-top: 25px;
+    color: #3F4868;
+}
+.tarjetas p {
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+    margin-top: 25px;
+    color: #B9B9C1;
+}
+.tarjetas img {
+    position: absolute;
+    top: -15%;
+    left: 42%;
+}
+
+
+/* -------- SECTION.SIMPLIFY -------- */
+section.simplify {
+    background-color: #F3613C;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    width: 100vw;
+    height: 224px;
+}
+div.simplify-content {
+    width: 1110px;
+    height: 96px;
+    display: flex;
+    flex-direction: row;
+    gap: 530px;
+    align-items: center;
+    justify-content: center;
+}
+div.text-simplify {
+    width: 438px;
+    height: 96px;
+}
+div.text-simplify h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.005em;
+    color: #FFFFFF;
+}
+
+
+
+
+
+/* -------- FOOTER -------- */
+footer {
+    background-color: #1E1E26;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    width: 100vw;
+    height: 247px;
+}
+
+.footer-content {
+    width: 1102px;
+    height: 141px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+
+/* DIV 1 */
+div.logo-redes {
+    height: 141px;
+    align-items: flex-start;
+}
+article#logo {
+    margin-bottom: 25px;
+}
+article#redes-sociales {
+    margin-top: 75px;
+}
+#redes-sociales a {
+    color: white;
+    font-size: 30px;
+    width: 100%;
+    margin: 5px;
+}
+
+/* DIV 2 */
+.menu-footer {
+    width: 392.73px;
+    height: 141.14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 75px;
+}
+article#menu-uno {
+    height: 141.14px;
+    justify-content: space-around;
+}
+article#menu-dos {
+    height: 141.14px;
+    justify-content: space-between;
+}
+nav.menu-mobile2 a {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+
+
+/* DIV 3 */
+.email-go-copyright {
+    align-items: flex-end;
+}
+#email-go {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+#email-go input {
+    width: 201px;
+    height: 44px;
+    background-color: #FFFFFF;
+    border-radius: 50px;
+}
+
+#copyright {
+    display: flex;
+    justify-content: flex-end;
+}
+article#copyright p {
+    font-weight: 500;
+    font-size: 12.5px;
+    line-height: 18px;
+    color: #8C8C94;
+    margin-top: 55px;
+}
+
+/* DIV 4 SOLO SE VE EN MOBILE */
+.copyright-mobile {
+    display: none;
+}
+.copyright-mobile {
+    font-weight: 500;
+    font-size: 12.5px;
+    line-height: 18px;
+    color: #8C8C94;
+}
+
+
+/* PROFE MI VIEWPORT DE DESKTOP ES DE 1536px */
+/* MOBILE VIEWPORT 375px */
+@media (max-width: 376px) {
+
+header {
+    justify-content: space-around;
+}
+
+/* -------- MENUS DE NAVEGACION -------- */
+.menu-desktop {
+    display: none;  
+}
+.menu-desktop a {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 19px;
+}
+
+/* -------------------- MENU HAMBUERGUESA ---------------- */
+.hamburguesa {
+    display: block;
+}
+.menu-mobile {
+    position: fixed;
+    display: block;
+}
+
+/* --------------------------------------------------------- */
+
+.menu-mobile a:hover {
+    color: #F3603B;;
+    transition: .3s;
+    font-size: 60px;
+}
+#check:checked ~ .menu-mobile {
+    height: 100vh;
+    background-color: rgba(255, 255, 255, .95);
+}
+#check:checked ~ .menu-mobile a {
+    display: block;
+}
+.menu-mobile:checked {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+} /* MENU PARA MOBILE OPRIMIDO */
+#check {
+    display: none;
+}
+
+/* ------------------------- BOTONES ------------------------------ */
+.button-started button {
+    display: none;
+}
+
+/* ------------------- SECTION.UNO -------------------- */
+section.uno {
+    display: flex;
+    padding: 0%;
+    width: 375px;
+    height: 500px;
+}
+section.home {
+    flex-direction: column-reverse;
+    gap: 2vw;
+    width: 375px;
+    height: 100vh;
+    align-items: center;
+}
+
+div.bring {
+    width: 95vw;
+    height: 40vh;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    color: #232C50;
+    font-size: 45px;
+    line-height: 45px;
+    letter-spacing: 0px;
+    text-align: center;
+}
+div.bring p {
+    width: 95vw;
+    text-align: center;
+    align-items: center;
+}
+div.illustrator {
+    width: 350px;
+    height: 550px;
+    background-size: 320px;
+
+}
+
+.button-started2 {
+    justify-content: center;
+    align-items: center;
+    margin-left: 110px;
+}
+
+/* -------------------------- SECTION.DOS ------------------------- */
+section.dos {
+    height: 1100px;
+}
+section.whats-different {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3vw;
+    width: 95vw;
+    height: 549px;
+}
+div.text-different {
+    top: 0px;
+    height: 100%;
+    width: 95vw;
+
+    justify-content: center;
+}
+div.text-different h2 {
+    width: 360px;
+    text-align: center;
+}
+div.text-different p {
+    margin-top: 40px;
+    width: 337px;
+    left: 50px;
+    text-align: center;
+}
+div.lista {
+    height: 100vh;
+    width: 375px;
+    gap: 45px;
+    margin-top: 50px;
+}
+
+div.lista-uno article,
+div.lista-dos article,
+div.lista-tres article
+{
+    margin-left: 10px;
+    gap: 5px;
+}
+
+div.lista-uno p {
+    height: 150px;
+    width: 350px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+div.lista-dos  p {
+    height: 150px;
+    width: 350px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+div.lista-tres  p {
+    height: 150px;
+    width: 350px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+
+/* -------- SECTION.WHATS-SAID -------- */
+section.tres {
+    margin-top: 100px;
+}
+section.whats-said {
+    align-items: center;
+    width: 375px;
+    height: 478px;
+}
+div.cartas {
+    height: 255px;
+    width: 370px;
+}
+
+#anisha-li {
+    display: none;
+}
+#richard-watts {
+    display: none;
+}
+
+
+/* ------------- SECTION.SIMPLIFY ---------------- */
+section.simplify {
+    gap: 1vw;
+    width: 375px;
+    height: 300px;
+}
+div.simplify-content {
+    width: 95vw;
+    height: 110px;
+    flex-direction: column;
+    gap: 75px;
+}
+div.text-simplify {
+    width: 350px;
+    height: 96px;
+    text-align: center;
+}
+
+
+/* -------- FOOTER -------- */
+footer {
+    flex-direction: column;
+    gap: 0vw;
+    height: 350px;
+}
+
+.footer-content {
+    width: 99vw;
+    height: 350px;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/* DIV 1 */
+div.logo-redes {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column-reverse;
+}
+article#logo2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+article#redes-sociales {
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+/* DIV 2 */
+.menu-footer {
+    width: 370px;
+    height: 100px;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.menu-mobile2 {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    height: 100px;
+}
+
+
+/* DIV 3 */
+.email-go-copyright {
+    align-items: center;
+}
+#email-go {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#copyright {
+    display: none;
+}
+
+/* DIV 4 SOLO SE VE EN MOBILE */
+.copyright-mobile {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+}
